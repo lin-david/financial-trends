@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FinTrends</title>
+
+  <link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="../static/style.css" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="../static/d3.v3.min.js"></script>
+  <script src = "../static/script.js"></script>
+
+</head>
+
+<body>
+  <!--
+  <script type="text/javascript" src="d3/d3.v3.min.js"></script>
+  <script src="js/script.js"></script>
+  -->
+  <div class="header">
+    <div id="title"> <b> FinTrends </b> </div>
+    <div id="subtitle"> Analyzing Financial Markets Based on Social Trends </div>
+  </div>
+  <div id="info">
+    <form id="myform" action="/fintrends" method="POST">
+      <input type="search" id="searchbar" name="text" onkeydown="search(this)" placeholder="What trend or event would you like to analyze?">
+      <input type="submit" name="submit" id="submitbutton">
+    <div id="graphcontainer">
+      <div id="graph"></div>
+      <script src="../static/d3LineChart.js"></script>
+    </div>
+    <div id = "dateinput">
+      Starting month:
+        <div> <input type="month" id="startdate" name="datestart" onkeydown="datestart(this)" placeholder="start date" min="2011-04"> </div>
+      Ending month:
+        <div> <input type="month" id="startdate" name="dateend" onkeydown="dateend(this)" placeholder="end date" max="2016-11"> </div>
+      </form>
+    </div>
+    <div id="stockinfo">
+      Stock or Portofolio:
+      <div> <input type="text" id="stockname" value="QQQ" placeholder="stock name"> </div>
+      <!--
+      <div id="textnote">
+        Please note that other stocks and long time periods (>3 months) may take a few minutes to aggregate.
+        <br> <br>
+        Your social trend has
+        <br>
+        80%
+        <br> correlation with the financial market.
+      -->
+    </div>
+  </div>
+
+</body>
+</html>
