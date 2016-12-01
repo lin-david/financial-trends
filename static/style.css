@@ -115,7 +115,7 @@ body {
 #graph {
   position: relative;
   bottom: 60px;
-  right: 60px;
+  right: 50px;
 }
 
 /* tell the SVG path to be a thin blue line without any area fill */
